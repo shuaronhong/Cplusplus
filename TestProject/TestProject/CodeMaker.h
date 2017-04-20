@@ -11,28 +11,35 @@ using std::endl;
 
 class CodeMaker {
 public: 
-	
 	CodeMaker(int totalSlots, int totalColors){
 		srand(time(NULL));
-		
+		std::ostringstream ostrstr;
 		for (int i = 0; i < totalSlots; i++){
 			int rd = rand() % totalColors + 1;
 			result.push_back(rd);
+			ostrstr << rd;
 		}
+		resultStr = ostrstr.str();
 	}
-	void FeedBack(){
+	void FeedBack(string guessed){
+		if (resultStr == guessed) {
+			cout << "You guessed it" << endl;
+		}
+		else { cout << "Not Correct" << endl; }
 	}
+	
 	void Triumph(){
 		string output = "";
-		std::ostringstream ostrstr;
+		
 		for (vector<int>::iterator it = result.begin(); it != result.end(); it++){
-			ostrstr << *it;
+			
 			output += *it;
 		}
 		cout<<output<<endl;
-		cout << ostrstr.str() << endl;
+		
 	}
 private:
 	vector<int> result;
 	const string name = "Computer";
+	string resultStr;
 };

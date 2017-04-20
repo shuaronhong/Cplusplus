@@ -5,12 +5,22 @@ using std::cin;
 using std::endl;
 using std::string;
 
-static class Agreements {
-public:
+struct Agreements {
+	int totalSlots;
+	int totalColors;
+	int totalAttempts;
+	string lastModifiedPerson;
 	Agreements(){
 		totalSlots = 4;
 		totalColors = 6;
 		totalAttempts = 10;
+		lastModifiedPerson = "System";
+		display();
+	}
+	Agreements(int ttlSlots, int ttlColors, int ttlAttempts) {
+		totalSlots = ttlSlots;
+		totalColors = ttlColors;
+		totalAttempts = ttlAttempts;
 		lastModifiedPerson = "System";
 		display();
 	}
@@ -27,9 +37,5 @@ public:
 		lastModifiedPerson = name;
 		display();
 	}
-private:
-	static int totalSlots;
-	static int totalColors;
-	static int totalAttempts;
-	static string lastModifiedPerson;
+
 };

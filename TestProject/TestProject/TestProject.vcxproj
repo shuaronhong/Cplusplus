@@ -20,10 +20,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="morningShift.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Employee.h" />
+    <ClInclude Include="Agreements.h" />
+    <ClInclude Include="CodeBreaker.h" />
+    <ClInclude Include="CodeMaker.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{B8244AF1-E8F8-48B1-BACB-21AFA29E03E8}</ProjectGuid>
